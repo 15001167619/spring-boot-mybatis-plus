@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author 武海升
  * @date 2018/9/7 14:01
+ * @desc 数据库监控 http://localhost:6080/druid/index.html
  */
 @SpringBootApplication
 @Slf4j
