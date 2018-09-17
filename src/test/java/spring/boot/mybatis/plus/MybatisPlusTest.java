@@ -24,7 +24,7 @@ public class MybatisPlusTest {
     private IPersonService personService;
 
     @Test
-    public void testSelect() {
+    public void testInsert() {
         personService.insert(new Person());
     }
 

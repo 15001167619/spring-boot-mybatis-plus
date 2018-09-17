@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * @date 2018/9/7 15:07
  */
 @Component
-@ConfigurationProperties(prefix = "spring.datasource")
+@ConfigurationProperties(prefix = "spring.datasource.druid")
 @Data
 public class DruidProperties {
 
@@ -22,19 +22,19 @@ public class DruidProperties {
 
     private String password = "";
 
-    private String driverClassName = "com.mysql.cj.jdbc.Driver";
+    private String driverClassName = "";
 
-    private Integer initialSize = 2;
+    private Integer initialSize;
 
-    private Integer minIdle = 1;
+    private Integer minIdle;
 
-    private Integer maxActive = 60;
+    private Integer maxActive;
 
-    private Integer maxWait = 60000;
+    private Integer maxWait;
 
-    private Integer timeBetweenEvictionRunsMillis = 60000;
+    private Integer timeBetweenEvictionRunsMillis;
 
-    private Integer minEvictableIdleTimeMillis = 300000;
+    private Integer minEvictableIdleTimeMillis;
 
     private String validationQuery = "SELECT 'x'";
 
@@ -46,9 +46,9 @@ public class DruidProperties {
 
     private Boolean poolPreparedStatements = true;
 
-    private Integer maxPoolPreparedStatementPerConnectionSize = 20;
+    private Integer maxPoolPreparedStatementPerConnectionSize;
 
-    private String filters = "stat";
+    private String filters;
 
     public void config(DruidDataSource dataSource) {
 
