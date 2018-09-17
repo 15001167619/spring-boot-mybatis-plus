@@ -28,4 +28,9 @@ public class MybatisPlusTest {
         personService.insert(new Person());
     }
 
+    @Test
+    public void transferAccounts() {
+        personService.transferAccounts(new Person(1000011,45.00),new Person(1000012,20.00),5d);
+    }
+
 }

@@ -28,10 +28,16 @@ public class Person extends Model {
 
     private String name;
 
+    private Double balance;
+
     private Date addTime = new Date();
 
     public Person(){
 
+    }
+    public Person(Integer id,Double balance){
+        this.id = id;
+        this.balance = balance;
     }
 
     public Person(String name){
