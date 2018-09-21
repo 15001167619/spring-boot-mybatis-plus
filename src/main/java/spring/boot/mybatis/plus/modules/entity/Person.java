@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -19,6 +20,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @Data
 @TableName("person")
+@Builder
 public class Person extends Model {
 
     private static final long serialVersionUID = 1L;
@@ -30,19 +32,7 @@ public class Person extends Model {
 
     private Double balance;
 
-    private Date addTime = new Date();
-
-    public Person(){
-
-    }
-    public Person(Integer id,Double balance){
-        this.id = id;
-        this.balance = balance;
-    }
-
-    public Person(String name){
-        this.name = name;
-    }
+    private Date addTime;
 
     @Override
     protected Serializable pkVal() {

@@ -25,12 +25,14 @@ public class MybatisPlusTest {
 
     @Test
     public void testInsert() {
-        personService.insert(new Person());
+        personService.insert(Person.builder().name("武海升").build());
     }
 
     @Test
     public void transferAccounts() {
-        personService.transferAccounts(new Person(1000011,45.00),new Person(1000012,20.00),5d);
+//        personService.transferAccounts(new Person(1000011,45.00),new Person(1000012,20.00),5d);
+        personService.transferAccounts(Person.builder().id(1000011).balance(45.00).build(),
+                Person.builder().id(1000012).balance(20.00).build(),5.00);
     }
 
 }
